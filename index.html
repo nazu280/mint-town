@@ -7,7 +7,6 @@
     <style>
       html, body {
         background-color: #242424;
-        color: #ffffff;
       }
       
       .searchBox {
@@ -26,6 +25,42 @@
 
       .이름 {
         font-weight: bold;
+      }
+      
+      ::-webkit-scrollbar {
+          width: 0px;
+          background-color: transparent;
+      }
+
+      ::-webkit-scrollbar-button {
+          display: none;
+          width: 0;
+          height: 0;
+      }
+
+      ::-webkit-scrollbar-corner {
+          background-color: transparent;
+      }
+
+      ::-webkit-scrollbar-thumb {
+          background-color: #242424;
+          border: 2px solid #242424;
+          border-radius: 10px;
+      }
+      
+      @keyframes sea {
+        0% {
+        height: 40px;
+          width: 20%;
+          text-align: left;
+          padding-left: 10px;
+        }
+        100% {
+        height: 40px;
+          width: 40%;
+          text-align: left;
+          padding-left: 10px;
+        }
       }
 
       .search {
@@ -54,11 +89,17 @@
       .search:hover {
         border: 3px solid #66ad8a;
       }
+      
+      input, textarea {
+        -moz-user-select: auto;
+        -webkit-user-select: auto;
+        -ms-user-select: auto;
+        user-select: auto;
+      }
     </style>
   </head>
 
   <body>
-    <div style="text-align:center">
     <div class="searchBox">
       <label><input type="text" id="search" onkeyup="filter()" placeholder="검색" onclick="document.getElementById('search').focus()"></label>
 
@@ -69,7 +110,6 @@
         <span class="이름">네즈 </span>
         <span class="정보">0x69757f9F880725F2b1E86a28519aDd9A83e67C27</span>
       </div>
-    </div>
     </div>
 
     <script>
